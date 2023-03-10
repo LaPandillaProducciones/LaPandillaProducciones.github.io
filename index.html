@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>
+      a {text-decoration:none}
+  </style>
+</head>
+<body>
+
+<!-- <a href='anadir.html'>Añadir.html en esta pestaña usando el enalce HTML</a>
+<br/><br />
+<a href='anadir.html' target='_blank'>Añadir.html usando el enlace HTML</a>
+<br /><br />
+<a onclick='anadirPestana()'>Añadir html en otra pestaña desde Javascript</a>
+<br /><br />
+<a onclick='anadirPestanaDisco()'>Añadir html en otra pestaña desde Javascript y desde una carpeta realativa</a>
+<br /><br />
+<a onclick='anadirPestanaDiscoAbsoluta()'>Añadir html en otra pestaña desde Javascript y con una ruta absoluta (de mi disco)</a> -->
+
+<a href='mapa2023.html'>Añadir.html en esta pestaña usando el enalce HTML</a>
+<script>
+function anadirPestana(){
+window.open("anadir.html", '_blank');
+}
+
+function anadirPestanaDisco(){
+window.open("./carpeta/anadir.html", '_blank');
+}
+
+function anadirPestanaDiscoAbsoluta(){
+window.open("D:/PROYECTOS/prueba/pestana/anadir.html", '_blank');
+}
+
+</script>
+
+</body>
+</html>
