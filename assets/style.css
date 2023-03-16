@@ -33,7 +33,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 .navbar-nav > li > a{font-size: 1em;line-height: 3.6em;}
 .navbar-fixed-top{top: 5px;}
 .navbar-inverse{background: #111;}
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{background: none;color: #21abca;}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{background: none;color: #000000;}
 
 #head,.carousel{margin-top: 0;}
 
@@ -78,7 +78,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 
 
 .highlight-info{ background:url(../images/lab.jpg) center fixed; background-size: cover; color:#fff;}
-.highlight-info .overlay{background: rgba(33,171,202,0.5);}
+.highlight-info .overlay{background: rgba(0, 0, 0, 0.486);}
 .highlight-info h4{color: #fff;margin:0.5em 0 0 0;}
 /*about us*/
 
