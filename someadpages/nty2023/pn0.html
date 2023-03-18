@@ -53,6 +53,64 @@
 					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
 						<div class="hero_slide_content text-center">
 							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">1 <span>2</span> today!</h1>
+                            <!-- mi prueba -->
+                            <form>
+                                    <label for="ElTexto">Tu pista tiene una palabra clave, ¿Cual es?: </label> 
+                                    <br>
+                                    <input type="text" id="clave" name="clave" 
+                                        required size="20" placeholder="palabra" minlength="1" maxlength="20">
+                                    <button id="ir">Vamos!!</button> 
+                                    <script>
+                                        let palabra = document.getElementById('clave'); 
+                                        document.getElementById("ir").onclick = function ir()
+                                        {
+                                            let choice = palabra.value;
+
+                                            switch (choice) {
+                                            case 'google':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://www.google.com"
+                                                    }).click();
+                                                }
+                                            break;
+                                            case 'facebook':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://www.facebook.com"
+                                                    }).click();
+                                                }
+                                            break;
+                                            case 'youtube':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://www.youtube.com"
+                                                    }).click();
+                                                }
+                                            break;
+                                            case 'pandilla':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://lapandillaproducciones.github.io/"
+                                                    }).click();
+                                                }
+                                            break;
+                                            default:
+                                                {
+                                                    // Object.assign(document.createElement("a"), {
+                                                    // target: "_blank",
+                                                    // href: "#"
+                                                    // }).click();
+                                                }
+                          }
+                                        };                                                                                                
+                                </script> 
+                            </form>
+                            <!-- fin de mi prueba -->                                                             
 						</div>
 					</div>
 				</div>
