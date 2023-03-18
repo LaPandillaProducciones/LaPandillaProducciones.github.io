@@ -59,9 +59,40 @@
                                     <br>
                                     <input type="text" id="clave" name="clave" 
                                         required size="20" placeholder="palabra" minlength="1" maxlength="20">
-                                    <button id="ir">Vamos!!</button> 
+                                    <button id="ir" disabled="true">Vamos!!</button> 
                                     <script>
                                         let palabra = document.getElementById('clave'); 
+                                        const elBoton = document.getElementById("ir");
+                                        document.getElementById("clave").oninput = function activarBoton()
+                                        {
+                                            let choice = palabra.value; 
+                                            switch (choice) {
+                                            case 'google':
+                                                {
+                                                   elBoton.disabled = false;
+                                                }
+                                            break;
+                                            case 'facebook':
+                                                {
+                                                    elBoton.disabled = false;
+                                                }
+                                            break;
+                                            case 'youtube':
+                                                {
+                                                    elBoton.disabled = false;
+                                                }
+                                            break;
+                                            case 'pandilla':
+                                                {
+                                                    elBoton.disabled = false;
+                                                }
+                                            break;
+                                            default:
+                                                {
+                                                    elBoton.disabled = true;
+                                                }                                            
+                                            }
+                                        }
                                         document.getElementById("ir").onclick = function ir()
                                         {
                                             let choice = palabra.value;
@@ -73,6 +104,7 @@
                                                     target: "_blank",
                                                     href: "https://www.google.com"
                                                     }).click();
+                                                    palabra.value = "";
                                                 }
                                             break;
                                             case 'facebook':
@@ -81,6 +113,7 @@
                                                     target: "_blank",
                                                     href: "https://www.facebook.com"
                                                     }).click();
+                                                    palabra.value = "";
                                                 }
                                             break;
                                             case 'youtube':
@@ -89,6 +122,7 @@
                                                     target: "_blank",
                                                     href: "https://www.youtube.com"
                                                     }).click();
+                                                    palabra.value = "";
                                                 }
                                             break;
                                             case 'pandilla':
@@ -97,6 +131,7 @@
                                                     target: "_blank",
                                                     href: "https://lapandillaproducciones.github.io/"
                                                     }).click();
+                                                    palabra.value = "";
                                                 }
                                             break;
                                             default:
