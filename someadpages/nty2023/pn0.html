@@ -58,7 +58,7 @@
                                     <label for="ElTexto">Tu pista tiene una palabra clave, ¿Cual es?: </label> 
                                     <br>
                                     <input type="text" id="clave" name="clave" 
-                                        required size="20" placeholder="palabra" minlength="1" maxlength="20" value=""" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                        required size="20" placeholder="palabra" minlength="1" maxlength="20" value=""" style="text-transform:lowercase" onkeyup="javascript:this.value=this.value.toLowerCase();">
                                     <button id="ir" disabled="true">Vamos!!</button> 
                                     <script>
                                         let palabra = document.getElementById('clave'); 
@@ -67,26 +67,26 @@
                                         {
                                             let choice = palabra.value; 
                                             switch (choice) {
-                                            case 'GOOGLE':
+                                            case 'google':
                                                 {
                                                    elBoton.disabled = false;
                                                 }
                                             break;
-                                            case 'FACEBOOK':
+                                            case 'facebook':
                                                 {
                                                     elBoton.disabled = false;
                                                 }
                                             break;
-                                            case 'YOUTUBE':
+                                            case 'youtube':
                                                 {
                                                     elBoton.disabled = false;
                                                 }
                                             break;
-                                            case 'PANDILLA':
+                                            case 'pandilla':
                                                 {
                                                     elBoton.disabled = false;
                                                 }
-                                            break;
+                                            break;                                            
                                             default:
                                                 {
                                                     elBoton.disabled = true;
@@ -98,7 +98,7 @@
                                             let choice = palabra.value;
 
                                             switch (choice) {
-                                            case 'GOOGLE':
+                                            case 'google':
                                                 {
                                                     Object.assign(document.createElement("a"), {
                                                     target: "_blank",
@@ -107,7 +107,7 @@
                                                     palabra.value = "";
                                                 }
                                             break;
-                                            case 'FACEBOOK':
+                                            case 'facebook':
                                                 {
                                                     Object.assign(document.createElement("a"), {
                                                     target: "_blank",
@@ -116,7 +116,7 @@
                                                     palabra.value = "";
                                                 }
                                             break;
-                                            case 'YOUTUBE':
+                                            case 'youtube':
                                                 {
                                                     Object.assign(document.createElement("a"), {
                                                     target: "_blank",
@@ -125,7 +125,7 @@
                                                     palabra.value = "";
                                                 }
                                             break;
-                                            case 'PANDILLA':
+                                            case 'pandilla':
                                                 {
                                                     Object.assign(document.createElement("a"), {
                                                     target: "_blank",
