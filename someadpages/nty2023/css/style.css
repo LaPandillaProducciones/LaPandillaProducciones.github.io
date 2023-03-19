@@ -49,7 +49,7 @@
       position:relative;
       z-index:20;
       text-align:center;
-      color:#ffffff;
+      color:#000000;
 }
 
 
@@ -60,6 +60,12 @@
       font-size:2em;
       font-family: 'Oswald', sans-serif;
       margin-bottom:0.5rem;
+      color:#ffffff;
+}
+
+#hero .caption mark {
+      color:#ce8396;
+      background: #00000000;
 }
 
 #hero .caption h2 {

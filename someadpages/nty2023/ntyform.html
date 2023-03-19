@@ -11,9 +11,28 @@
       <link href="css/normalize.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
 
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="../../assets/animate/animate.css" />
+<link rel="stylesheet" href="../../assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="../../assets/gallery/blueimp-gallery.min.css">
+
 <!-- favicon -->
 <link rel="shortcut icon" href="../../images/favicon1.ico" type="image/x-icon">
 <link rel="icon" href="../../images/favicon1.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/style.css">
 
 </head>
 <body>
@@ -40,11 +59,11 @@
                   <div class="caption">
 										<!-- mi prueba -->
 										<form>
-                                                                  <h1><label for="ElTexto">Tu pista tiene una palabra clave, ¿Cual es?: </label> </h1>
+                                                                  <h1><label for="ElTexto">Escribe tu pabalra<mark>clave</mark></label> </h1>
                                                                   <br>
-                                                                  <input type="text" id="clave" name="clave" 
+                                                                  <input type="text" id="clave" name="clave"
                                                                         required size="20" placeholder="palabra" minlength="1" maxlength="20" value=""" style="text-transform:lowercase" onkeyup="javascript:this.value=this.value.toLowerCase();">
-                                                                  <button id="ir" disabled="true">Vamos!!</button> 
+                                                                  <button id="ir" disabled="true" type="submit" class="btn btn-dark">Vamos!!</button> 
                                                                   <script>
                                                                         let palabra = document.getElementById('clave'); 
                                                                         const elBoton = document.getElementById("ir");
