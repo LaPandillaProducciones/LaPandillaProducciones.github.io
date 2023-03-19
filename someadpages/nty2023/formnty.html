@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Mandilla Producciones</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="../../assets/animate/animate.css" />
+<link rel="stylesheet" href="../../assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="../../assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="../../images/favicon1.ico" type="image/x-icon">
+<link rel="icon" href="../../images/favicon1.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="../../assets/style.css">
+<!-- aqui para abjo lo nuevo -->
+
+<link rel="stylesheet" type="text/css" href="../../assets/styles/bootstrap4/bootstrap.min.css">
+<link href="../../assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="../../assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="../../assets/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="../../assets/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="../../assets/styles/responsive.css">
+</head>
+
+<body>
+
+<div class="super_container">
+	<!-- Home -->
+	<div class="home">
+		<!-- Hero Slider -->
+		<div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/slider_background.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">1 <span>2</span> today!</h1>
+                            <!-- mi prueba -->
+                            <form>
+                                    <label for="ElTexto">Tu pista tiene una palabra clave, ¿Cual es?: </label> 
+                                    <br>
+                                    <input type="text" id="clave" name="clave" 
+                                        required size="20" placeholder="palabra" minlength="1" maxlength="20" value=""" style="text-transform:lowercase" onkeyup="javascript:this.value=this.value.toLowerCase();">
+                                    <button id="ir" disabled="true">Vamos!!</button> 
+                                    <script>
+                                        let palabra = document.getElementById('clave'); 
+                                        const elBoton = document.getElementById("ir");
+                                        document.getElementById("clave").oninput = function activarBoton()
+                                        {
+                                            let choice = palabra.value; 
+                                            switch (choice) {
+                                            case 'google':
+                                                {
+                                                   elBoton.disabled = false;
+                                                }
+                                            break;
+                                            case 'facebook':
+                                                {
+                                                    elBoton.disabled = false;
+                                                }
+                                            break;
+                                            case 'youtube':
+                                                {
+                                                    elBoton.disabled = false;
+                                                }
+                                            break;
+                                            case 'pandilla':
+                                                {
+                                                    elBoton.disabled = false;
+                                                }
+                                            break;                                            
+                                            default:
+                                                {
+                                                    elBoton.disabled = true;
+                                                }                                            
+                                            }
+                                        }
+                                        document.getElementById("ir").onclick = function ir()
+                                        {
+                                            let choice = palabra.value;
+
+                                            switch (choice) {
+                                            case 'google':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://www.google.com"
+                                                    }).click();
+                                                    palabra.value = "";
+                                                }
+                                            break;
+                                            case 'facebook':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://www.facebook.com"
+                                                    }).click();
+                                                    palabra.value = "";
+                                                }
+                                            break;
+                                            case 'youtube':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://www.youtube.com"
+                                                    }).click();
+                                                    palabra.value = "";
+                                                }
+                                            break;
+                                            case 'pandilla':
+                                                {
+                                                    Object.assign(document.createElement("a"), {
+                                                    target: "_blank",
+                                                    href: "https://lapandillaproducciones.github.io/"
+                                                    }).click();
+                                                    palabra.value = "";
+                                                }
+                                            break;
+                                            default:
+                                                {
+                                                    // Object.assign(document.createElement("a"), {
+                                                    // target: "_blank",
+                                                    // href: "#"
+                                                    // }).click();
+                                                }
+                                            }
+                                        };                                                                                                
+                                </script> 
+                            </form>
+                            <!-- fin de mi prueba -->                                                             
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<iframe src="animacionprincipito.html" frameborder="0" scrolling="no" style="width:max-content ;height:max-content !important;"></iframe>
+
+<script src="../../assets/js/jquery-3.2.1.min.js"></script>
+<script src="../../assets/styles/bootstrap4/popper.js"></script>
+<script src="../../assets/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../../assets/plugins/greensock/TweenMax.min.js"></script>
+<script src="../../assets/plugins/greensock/TimelineMax.min.js"></script>
+<script src="../../assets/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="../../assets/plugins/greensock/animation.gsap.min.js"></script>
+<script src="../../assets/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="../../assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../../assets/plugins/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="../../assets/plugins/easing/easing.js"></script>
+<script src="../../assets/js/custom.js"></script>
+
+</body>
+</html>
