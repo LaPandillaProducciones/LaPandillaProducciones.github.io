@@ -2,7 +2,7 @@
    elemento sobre el que vamos a realizar la prueba */
 
    .app {
-    background-color: black;
+    background-color: rgb(255, 0, 0);
     color: white;
     font-size: 2rem;
     padding: 40px;
