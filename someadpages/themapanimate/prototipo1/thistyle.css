@@ -1,0 +1,33 @@
+/* Agregaremos algo de estilo para visualizar el 
+   elemento sobre el que vamos a realizar la prueba */
+
+   .app {
+    background-color: rgb(46, 37, 37);
+    color: white;
+    font-size: 2rem;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  
+  /* Esta es la parte que nos interesa */
+  @media screen and (max-width: 780px) and (orientation: portrait) {
+    * {
+        background-color: black;
+     }
+    .app {
+      display: none;
+    }
+  
+    .twin1 {
+      font-weight: 100;
+      font-size: 20px;
+      text-align: center;
+      color: white;
+      padding-top: 20px;
+    }
+    
+    .twin1::after {
+      Content: "Gire el telefono :).";
+    }
+  }
