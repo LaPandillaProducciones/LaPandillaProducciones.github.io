@@ -2,9 +2,9 @@
    elemento sobre el que vamos a realizar la prueba */
 
    .app {
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
-    /*font-size: 2rem;
+    /*background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
     padding: 40px;
     text-align: center;*/
   }
@@ -13,21 +13,25 @@
   /* Esta es la parte que nos interesa */
   @media screen and (max-width: 780px) and (orientation: portrait) {
     * {
-        background-color: rgba(0, 0, 0, 0);
+        background-color: rgb(192, 192, 192);
+        color: rgb(0, 0, 0);
+
      }
     .app {
       display: none;
     }
   
     .twin1 {
-      font-weight: 100;
-      font-size: 20px;
+      /*font-weight: 100%;*/
+      font-size: 50px;
       text-align: center;
-      color: rgba(0, 0, 0, 0);
-      padding-top: 20px;
+      background-color: rgba(255, 0, 0, 0);
+      color: rgb(0, 0, 0);
+      /*padding-top: 20px;*/
     }
     
     .twin1::after {
-      Content: "Gire el telefono :).";
+      
+      Content: "Gire el telefono";
     }
   }
