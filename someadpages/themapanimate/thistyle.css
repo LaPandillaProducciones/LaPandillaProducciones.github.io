@@ -2,18 +2,18 @@
    elemento sobre el que vamos a realizar la prueba */
 
    .app {
-    background-color: rgb(46, 37, 37);
-    color: white;
-    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    /*font-size: 2rem;
     padding: 40px;
-    text-align: center;
+    text-align: center;*/
   }
   
   
   /* Esta es la parte que nos interesa */
   @media screen and (max-width: 780px) and (orientation: portrait) {
     * {
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0);
      }
     .app {
       display: none;
@@ -23,7 +23,7 @@
       font-weight: 100;
       font-size: 20px;
       text-align: center;
-      color: white;
+      color: rgba(0, 0, 0, 0);
       padding-top: 20px;
     }
     
