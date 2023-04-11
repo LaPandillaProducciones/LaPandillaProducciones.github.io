@@ -2,7 +2,7 @@
    elemento sobre el que vamos a realizar la prueba */
 
    .app {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(46, 37, 37);
     color: white;
     font-size: 2rem;
     padding: 40px;
@@ -28,6 +28,6 @@
     }
     
     .twin1::after {
-      Content: "Voltee su móvil en modo vertical para ver el contenido.";
+      Content: "Gire el telefono :).";
     }
   }
