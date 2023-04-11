@@ -13,7 +13,7 @@
   /* Esta es la parte que nos interesa */
   @media screen and (max-width: 780px) and (orientation: portrait) {
     * {
-        background-color: rgb(192, 192, 192);
+        background-color: rgb(0, 0, 0);
         color: rgb(0, 0, 0);
 
      }
@@ -22,16 +22,16 @@
     }
   
     .twin1 {
-      /*font-weight: 100%;*/
+      /*font-weight: 100%;
       font-size: 50px;
       text-align: center;
       background-color: rgba(255, 0, 0, 0);
       color: rgb(0, 0, 0);
-      /*padding-top: 20px;*/
+      padding-top: 20px; 
+      background: url("./girar.gif") 0 0; */
     }
     
     .twin1::after {
-      
-      Content: "Gire el telefono";
+      Content: url("./girar.gif");
     }
   }
