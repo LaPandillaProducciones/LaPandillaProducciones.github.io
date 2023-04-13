@@ -108,7 +108,13 @@
             toggleFullscreen();		
       });
       document.addEventListener("fullscreenchange", () => {
-            console.log("se cambio la pantalla");
+            if (getFullscreenElement()){
+                  console.log("en el if");
+            }else{
+                  //document.exitFullscreen();
+                  console.log("en el else");
+                  cont.style.visibility="hidden";
+            }
       });
 
       /*hace visible la animacion al colocar el pin*/
