@@ -39,93 +39,95 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./thistyle.css">
 </head>
 <body>
-
-<!-- <main class="app"> -->
-
+      <div class="contenedor" id="otroContenedor">
       <div id="hero">
-
-
-                  <div class="texture"></div>
-
-                  <video
-                  loop
-                  muted
-                  autoplay
-                  preload="auto"
-                  >
-                        <source src="compressed.mp4" type="video/mp4">
-                        Your browser does not support the video tag.  
-                  </video>
-
-
-
-                  <div class="caption">
-										<!-- mi prueba -->
-										<form>
-                                                                  <h1><label for="ElTexto"><mark>¿Pin?</mark></label> </h1>
-                                                                  <br>
-                                                                  <input type="text" id="clave" name="clave"
-                                                                        required size="20" placeholder="palabra" minlength="1" maxlength="20" value=""" style="text-transform:lowercase" onkeyup="javascript:this.value=this.value.toLowerCase();">
-                                                                  <button id="ir" disabled="true" type="submit" class="btn btn-dark">Vamos!!</button> 
-                                                                  <script>
-                                                                        let palabra = document.getElementById('clave'); 
-                                                                        const elBoton = document.getElementById("ir");
-                                                                        document.getElementById("clave").oninput = function activarBoton()
-                                                                        {
-                                                                              let choice = palabra.value; 
-                                                                              switch (choice) {
-                                                                              case '141115':
-                                                                                    {
-                                                                                       elBoton.disabled = false;
-                                                                                    }
-                                                                              break;                                                                                                                          
-                                                                              default:
-                                                                                    {
-                                                                                          elBoton.disabled = true;
-                                                                                    }                                            
-                                                                              }
-                                                                        }
-                                                                        document.getElementById("ir").onclick = function ir()
-                                                                        {
-                                                                              let choice = palabra.value;
-            
-                                                                              switch (choice) {
-                                                                              case '141115':
-                                                                                    {
-                                                                                          Object.assign(document.createElement("a"), {
-                                                                                          target: "_self",
-                                                                                          href: "./mapPrincipalPage.html"
-                                                                                          }).click();
-                                                                                          palabra.value = "";
-                                                                                    }
-                                                                              break;                                                                            
-                                                                              default:
-                                                                                    {
-                                                                                          // Object.assign(document.createElement("a"), {
-                                                                                          // target: "_blank",
-                                                                                          // href: "#"
-                                                                                          // }).click();
-                                                                                    }
-                                                                              }
-                                                                        };                                                                                                
-                                                            </script> 
-                                                      </form>
-                                                      <!-- fin de mi prueba --> 
-
-                  </div>
-
+            <div class="texture"></div>
+            <video
+            loop
+            muted
+            autoplay
+            preload="auto"
+            >
+                  <source src="compressed.mp4" type="video/mp4">
+                  Your browser does not support the video tag.  
+            </video>
+            <div class="caption">
+			<form>
+                        <h1><label for="ElTexto"><mark>¿Pin?</mark></label> </h1>
+                        <br>
+                        <input type="password" id="clave" name="clave"
+                        required size="20" placeholder="palabra" minlength="1" maxlength="20" value="" style="text-transform:lowercase" onkeyup="javascript:this.value=this.value.toLowerCase();">                                                                    
+                  </form>
+            </div>
       </div>
+      </div>
+      <div class="contenedor" id="elContenedor">
+		<div class="hijo" id="elhijo">
+			<iframe id="elframe" clasee="app" src="./MapAnimation/MapAnimate.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">
+				<div></div>
+			</iframe>	
+		</div>
+	</div>
+      <span class="twin1"></span>
 
+<!-- <script src="js/object-fit-videos.js"></script>
+<script src="js/app.js"></script> -->
+<script>
+      const cont = document.getElementById("elContenedor");
+      cont.style.visibility="hidden";
 
-      <script src="js/object-fit-videos.js"></script>
-      <script src="js/app.js"></script>
+      let palabra = document.getElementById('clave'); 
 
+      /*previene enter en passwords*/
+      document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('input[type=password]').forEach( node => node.addEventListener('keypress', e => {
+        if(e.keyCode == 13) {
+          e.preventDefault();
+        }
+      }))
+      });
+      //hace pantalla completa
+      function getFullscreenElement(){
+            return document.fullscreenElement
+                  || document.webkitFullscreenElement
+                  || document.mozFullscreenElement
+                  || document.msFullscreenElement;
+      }
+      function toggleFullscreen(){
+            if (getFullscreenElement()){
+                  document.exitFullscreen();
+            } else {
+                  document.documentElement.requestFullscreen().catch(console.log);
+            }
+      }
+      document.addEventListener("dblclick", () => {
+            toggleFullscreen();		
+      });
+      document.addEventListener("fullscreenchange", () => {
+            console.log("se cambio la pantalla");
+      });
 
-<!-- </main>
-<span class="twin1"></span> -->
+      /*hace visible la animacion al colocar el pin*/
+      document.getElementById("clave").oninput =       function activarBoton()
+      {
+            let choice = palabra.value; 
+            switch (choice) {
+            case '141115':
+                  {
+                        cont.style.visibility="visible";
+                        toggleFullscreen();	
+                  }
+            break;                                                                                                                          
+            default:
+                  {
+                        cont.style.visibility="hidden";	
+                  }                                            
+            }
+      }  
+</script>
 </body>
 </html>
