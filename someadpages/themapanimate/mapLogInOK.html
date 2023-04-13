@@ -57,10 +57,12 @@
             </video>
             <div class="caption">
 			<form>
-                        <h1><label for="ElTexto"><mark>¿Pin?</mark></label> </h1>
+                        <h1><label for="ElTexto"><mark>¿Pinn?</mark></label> </h1>
                         <br>
-                        <input type="password" id="clave" name="clave"
-                        required size="20" placeholder="palabra" minlength="1" maxlength="20" value="" style="text-transform:lowercase" onkeyup="javascript:this.value=this.value.toLowerCase();">                                                                    
+                        <input type="password" id="clave" 
+                        name="clave" required size="20" placeholder="palabra" 
+                        minlength="1" maxlength="20" value="" style="text-transform:lowercase" 
+                        onkeyup="javascript:this.value=this.value.toLowerCase();" disabled >                                                                    
                   </form>
             </div>
       </div>
@@ -81,7 +83,7 @@
       cont.style.visibility="hidden";
 
       let palabra = document.getElementById('clave'); 
-
+      palabra.disabled = false;
       /*previene enter en passwords*/
       document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('input[type=password]').forEach( node => node.addEventListener('keypress', e => {
@@ -104,9 +106,9 @@
                   document.documentElement.requestFullscreen().catch(console.log);
             }
       }
-      document.addEventListener("dblclick", () => {
+      /*document.addEventListener("dblclick", () => {
             toggleFullscreen();		
-      });
+      });*/
       document.addEventListener("fullscreenchange", () => {
             if (getFullscreenElement()){
                   console.log("en el if");
@@ -114,6 +116,7 @@
                   //document.exitFullscreen();
                   console.log("en el else");
                   cont.style.visibility="hidden";
+                  palabra.disabled = false;
             }
       });
 
@@ -125,6 +128,7 @@
             case '141115':
                   {
                         palabra.value = "";
+                        palabra.disabled = false;
                         toggleFullscreen();
                         cont.style.visibility="visible";	
                   }
