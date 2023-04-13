@@ -57,7 +57,7 @@
             </video>
             <div class="caption">
 			<form>
-                        <h1><label for="ElTexto"><mark>¿Pin?</mark></label> </h1>
+                        <h1><label for="ElTexto" id="ElTexto"><mark>¿Pin?</mark></label> </h1>
                         <br>
                         <input type="password" id="clave" 
                         name="clave" required size="20" placeholder="palabra" 
@@ -82,7 +82,7 @@
       const cont = document.getElementById("elContenedor");
       cont.style.visibility="hidden";
 
-      let palabra = document.getElementById('clave'); 
+      let palabra = document.getElementById('clave');
       palabra.disabled = false;
       /*previene enter en passwords*/
       document.addEventListener('DOMContentLoaded', () => {
@@ -130,6 +130,7 @@
                         palabra.value = "";
                         palabra.disabled = false;
                         toggleFullscreen();
+                        palabra.blur();
                         cont.style.visibility="visible";	
                   }
             break;                                                                                                                          
