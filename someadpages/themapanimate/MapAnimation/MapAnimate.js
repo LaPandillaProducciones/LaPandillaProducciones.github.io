@@ -1184,7 +1184,7 @@ p.nominalBounds = new cjs.Rectangle(-28360.5,-8220.6,55732.8,24147.1);
 		this.button_1.addEventListener("click", fl_ClickToGoToWebPage);
 		
 		function fl_ClickToGoToWebPage() {
-			window.open("https://drive.google.com/file/d/16BkYRthXIia2ivC1ZZHcz6DtYgWTnJyc/view?usp=sharing", "_self");
+			window.open("https://drive.google.com/file/d/16BkYRthXIia2ivC1ZZHcz6DtYgWTnJyc/view?usp=sharing", "_blank");
 		}
 	}
 	this.frame_347 = function() {
