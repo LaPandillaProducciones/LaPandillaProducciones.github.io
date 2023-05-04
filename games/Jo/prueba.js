@@ -6,6 +6,11 @@ testPosRaton.addEventListener("mousemove", function(evt) {
   marcarCoords(output, mousePos.x, mousePos.y)
 }, false);
 
+testPosDedo.addEventListener("touchstart", function(evt) {
+  var mousePos = oMousePos(testPosRaton, evt);
+  marcarCoords(output, mousePos.x, mousePos.y)
+}, false);
+
 testPosRaton.addEventListener("mouseout", function(evt) {
   limpiarCoords(output);
 }, false);
