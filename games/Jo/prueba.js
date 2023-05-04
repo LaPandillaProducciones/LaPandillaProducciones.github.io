@@ -11,6 +11,11 @@ testPosDedo.addEventListener("touchstart", function(evt) {
   marcarCoords(output, mousePos.x, mousePos.y)
 }, false);
 
+testPosDezlizar.addEventListener("touchmove", function(evt) {
+  var mousePos = oMousePos(testPosRaton, evt);
+  marcarCoords(output, mousePos.x, mousePos.y)
+}, false);
+
 testPosRaton.addEventListener("mouseout", function(evt) {
   limpiarCoords(output);
 }, false);
